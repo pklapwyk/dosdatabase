@@ -1,0 +1,49 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: lightseagreen
+    }
+h1 {
+    color: brown;
+}
+.sidebarContainer {
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+.sidebar {
+    background-color: yellowgreen;
+    height: 500px;
+}
+.dataContainer {
+    display: grid;
+    grid-template-columns: 256px auto;    
+}
+#coverImg {
+    max-width: 264px;
+    border: 10px solid red;
+    margin-left: 20px;
+}
+#list {
+    padding-left: 20px;
+    height: 320px;
+    width: 400px;
+}
+#description {
+    padding-left: 10px;
+}
+.aboutMe {
+    font-size: 14pt;
+    margin-left: 20px;
+    margin-top: 20px;
+    max-width: 500px;
+    color: darkred;
+}
+#mainTitle {
+    padding-left: 10px;
+}
+#addGame > label {
+    width: 150px;
+    float: left;
+}
+#addGame > input {
+    margin-bottom: 2pt;
+}

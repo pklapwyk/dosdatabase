@@ -1,0 +1,35 @@
+doctype html
+html(lang='en')
+    head
+        title= 'Dos Game Database'   
+        style
+            include ./styles.css
+            include ./pagination.css
+    body
+        .sidebarContainer
+            .sidebar
+                p Browse Games By:
+                a(href='/alphabetical') Alphabetical
+                br
+                a(href='/genre') Genre
+                br
+                a(href='/yearPublished') Year Published
+                br
+                a(href='/publisher') Publisher
+                br
+                a(href='/developer') Developer
+                hr
+                a(href='/add_game') Add Game Form
+                hr
+                a(href='/') Homepage
+                br
+                a(href='/idList') Game Id's
+                br
+                a(href='/about') About Me
+
+
+            .mainContent    
+                block mainData
+        footer
+            hr
+            p Copyright &copy; 2018

@@ -1,0 +1,10 @@
+extends ./layout
+
+block mainData
+    h1 All games by Name and ID
+    .gameFlex
+        each item in gameData
+            #gameFile
+                = item.title
+                br
+                = item.yearPublished

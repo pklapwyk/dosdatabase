@@ -1,0 +1,27 @@
+extends ./layout
+
+block mainData
+    .dataContainer
+        #coverImg
+            block coverImg
+        #list
+            h1= gameData.title
+            ul
+                li 
+                    |Genre: 
+                    span= gameData.genre.join(", ")                       
+                li 
+                    |Publisher: 
+                    span= gameData.publisher
+                li 
+                    |Developer: 
+                    span= gameData.developer
+                li 
+                    |Year Published: 
+                    span= gameData.yearPublished
+                //-li
+                    |ID: 
+                    span= gameData._id
+            #description
+                h3 Game Description
+                p= gameData.description

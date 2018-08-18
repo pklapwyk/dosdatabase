@@ -1,0 +1,15 @@
+db.games.insertMany([
+{"title": "Cosmo\"s Cosmic Adventure: Forbidden Planet","genre": ["Action", "Side-Scroller"],"yearPublished": "1992", "publisher": "Apogee Software, Ltd.", "developer": "Apogee Software, Ltd.", "description": ""},
+{"title": "Crystal Caves", "genre": ["Action", "Side-Scroller"], "yearPublished": "1991", "publisher": "Apogee Software, Ltd.", "developer": "Apogee Software, Ltd.", "description": ""},
+{"title": "Commander Keen 2: The Earth Explode", "genre": ["Action", "Side-Scroller"], "yearPublished": "1990", "publisher": "Apogee Software, Ltd.", "developer": "Id Software, Inc.", "description": ""},
+{"title": "Commander Keen 3: Keen Must Die", "genre": ["Action", "Side-Scroller"], "yearPublished": "1990", "publisher": "Apogee Software, Ltd.", "developer": "Id Software, Inc.", "description": ""},
+{"title": "Commander Keen 4: Secret of the Oracle","genre": ["Action", "Side-Scroller"],"yearPublished": "1991","publisher": "Apogee Software, Ltd.","developer": "Id Software,","description": ""},
+{"title": "Commander Keen 5: The Armageddon Machine","genre": ["Action", "Side-Scroller"],"yearPublished": "1991","publisher": "Apogee Software, Ltd.","developer": "Id Software, Inc.","description": ""},
+{"title": "Commander Keen: Aliens Ate My Babysitter","genre": ["Action", "Side-Scroller"],"yearPublished": "1991","publisher": "FormGen, Inc.","developer": "Id Software, Inc.","description": ""},
+{"title": "Commander Keen 1: Marooned on Mars","genre": ["Action", "Side-Scroller"],"yearPublished": "1991","publisher": "Softdisk Publishing","developer": "Id Software, Inc.","description": ""},
+{"title": "Lemmings","genre": ["Puzzle"],"yearPublished": "1991", "publisher": "Psygnosis Limited", "developer": "DMA Design Limited", "description": ""},
+{"title": "Mario Is Missing", "genre": ["Educational"], "yearPublished": "1992", "publisher": "The Software Toolworks, Inc.", "developer": "The Software Toolworks, Inc.", "description": ""},
+{"title": "Heroes of the 357th", "genre": ["Action", "Flight Simulation"], "yearPublished": "1992", "publisher": "Electronic Arts, Inc.", "developer": "Midnight Software, Inc.", "description": ""},
+{"title": "Starwars: Dark Forces", "genre": ["Action", "First-Person Shooter"], "yearPublished": "1995", "publisher": "Sierra On-line, Inc.", "developer": "Impressions Games", "description": ""},
+{"title": "Wolfenstein 3D", "genre": ["Action", "First-Person Shooter"], "yearPublished": "1995", "publisher": "LucasArts Entertainment Company LLC.", "developer": "LucasArts Entertainment Company LLC.", "description": ""},
+])

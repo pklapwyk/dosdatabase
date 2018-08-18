@@ -1,0 +1,9 @@
+extends ./layout
+
+block mainData
+    h1 All games by Name and ID
+    p
+        each item in gameData
+            div= "Game Title: " + item.title
+            div= "Mongo ID: " + item._id
+            br

@@ -1,0 +1,29 @@
+extends ./layout
+
+block mainData
+    h2 Add Game Form
+    p 
+        | Please fill out as much information as you can. <br>
+        | For any fields that you are unsure of the information, please input N/A. <br>
+        | Any extra notes can be placed in the Game Description field.
+    
+    form(method='POST', action='/add_game')
+        #addGame
+            label Game Title:
+            input.form-control(name='title', type='text', autocomplete='off')
+        #addGame
+            label Genre:
+            input.form-control(name='genre', type='text', autocomplete='off')
+        #addGame
+            label Publisher:
+            input.form-control(name='publisher', type='text', autocomplete='off')
+        #addGame
+            label Developer:
+            input.form-control(name='developer', type='text', autocomplete='off')
+        #addGame
+            label Year Published:
+            input.form-control(name='yearPublished', type='text', autocomplete='off')
+        #addGame
+            label Game Description:
+            textarea.form-control(name='description')
+        input.btn.btn-primary(type='submit', value='Submit')
