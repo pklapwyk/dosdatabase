@@ -3,7 +3,7 @@ extends ./layout
 block mainData
     .dataContainer
         #coverImg
-            block coverImg
+            img(src='/images/' + gameData._id + 'cover.jpg')
         #list
             h1= gameData.title
             ul

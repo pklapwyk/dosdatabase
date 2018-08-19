@@ -7,11 +7,15 @@ const bodyParser = require('body-parser')
 //Bring in Models
 let gameData = require('./models/model.js');
 let addGames = require('./models/add_game.js');
+
 // View Engine Pug
 app.set('view engine', 'pug');
 
+// Set Public Folder
+app.use(express.static('public'));
+
 //Connect to Mongo Database
-mongoose.connect('mongodb://localhost/dosdatabase');
+mongoose.connect('mongodb://localhost/dosgames');
 
 //Check Mongo connection
 const db = mongoose.connection;
