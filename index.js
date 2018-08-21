@@ -5,8 +5,11 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
 
 //Bring in Models
-let gameData = require('./models/model.js');
-let addGames = require('./models/add_game.js');
+let gameData = require('./models/gameData.js');
+let addGames = require('./models/addGames.js');
+
+let publishers = require('./models/publishers.js');
+let developers = require('./models/developers.js');
 
 // View Engine Pug
 app.set('view engine', 'pug');
@@ -41,19 +44,6 @@ app.get('/', function(req, res){
     })
 })
 
-//Get Game List Page
-app.get('/game_list', (req, res) => {
-    gameData.findOne({}, function(err, gameSchema){
-        if(err){
-            console.log(err);
-        } else {
-            res.render('game_list', {
-                gameData: gameSchema
-            })    
-        }
-    })  
-}); 
-
 //Get Game Page By Mongo ID
 app.get('/games/:id', function(req, res){
     gameData.findOne({_id: req.params.id}, function(err, gameSchema){
@@ -72,10 +62,10 @@ app.get('/add_game', function(req, res){
     res.render('add_game')
 })
 app.post('/add_game', function(req, res){
-    let game = new addGames();
+    let game = new gameData();
     game.title = req.body.title;
     game.genre = req.body.genre;
-    game.publisher = req.body.genre;
+    game.publisher = req.body.publisher;
     game.developer = req.body.developer;
     game.yearPublished = req.body.yearPublished;
     game.description = req.body.description
@@ -131,6 +121,32 @@ app.get('/yearPublished', (req, res) => {
             })    
         }
     })  
+});
+
+// Get Publishers List Page
+app.get('/publishers', (req, res) => {
+    publishers.find().sort({"name" : 1}).exec(function(err, gameSchema){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('publishers', {
+                publishers: gameSchema
+            })    
+        }
+    })
+});
+
+//Get Developer List Page
+app.get('/developers', (req, res) => {
+    developers.find().sort({"name" : 1}).exec(function(err, gameSchema){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('developers', {
+                developers: gameSchema
+            })    
+        }
+    })
 });
 
 //Pagination

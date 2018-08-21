@@ -1,0 +1,7 @@
+extends ./layout
+
+block mainData
+    h1 List of all Developers
+    p
+        each item in developers
+            div= item.name

@@ -1,0 +1,7 @@
+extends ./layout
+
+block mainData
+    h1 All Publishers
+    p
+        each item in publishers
+            div= item.name

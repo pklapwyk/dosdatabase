@@ -6,5 +6,5 @@ block mainData
         each item in gameData
             #gameFile
                 a(href='/games/' + item._id)
-                    img(src='/images/' + item._id + '.jpg')
+                    img(src='/images/' + item._id + '.png')
                 a(href='/games/' + item._id)= item.title
