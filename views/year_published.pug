@@ -5,6 +5,8 @@ block mainData
     .gameFlex
         each item in gameData
             #gameFile
-                = item.title
+                a(href='/games/' + item._id)
+                    img(src='/images/' + item._id + '.png')
+                a(href='/games/' + item._id, #gameName)= item.title                
                 br
                 = item.yearPublished

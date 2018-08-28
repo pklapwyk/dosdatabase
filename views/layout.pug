@@ -8,6 +8,8 @@ html(lang='en')
     body
         .sidebarContainer
             .sidebar
+                a(href='/login') Login/Register
+                hr
                 p Browse Games By:
                 a(href='/games/alphabetical') Alphabetical
                 br
@@ -26,8 +28,6 @@ html(lang='en')
                 a(href='/games/idList') Game Id's
                 br
                 a(href='/about') About Me
-
-
             .mainContent    
                 block mainData
         footer

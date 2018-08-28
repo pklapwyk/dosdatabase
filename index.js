@@ -4,7 +4,7 @@ const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser')
 const router = express.Router();
-
+const expressValidator = require('express-validator');
 
 //Favicon
 app.use('/favicon.ico', express.static('./favicon.ico'));
@@ -12,7 +12,6 @@ app.use('/favicon.ico', express.static('./favicon.ico'));
 //Bring in Models
 let gameData = require('./models/gameData.js');
 let addGames = require('./models/addGames.js');
-
 let publishers = require('./models/publishers.js');
 let developers = require('./models/developers.js');
 
@@ -58,6 +57,8 @@ app.get('/about', function(req, res){
 let games = require('./routes/games');
 app.use('/games', games);
 
+let login = require('./routes/login');
+app.use('/login', login)
 
 
 //Listen on port 3000

@@ -61,6 +61,19 @@ router.get('/alphabetical', (req, res) => {
     })  
 });
 
+//List Games Alphabetically
+router.get('/genre', (req, res) => {
+    gameData.find().sort({"title" : 1}).exec(function(err, gameSchema){
+        if(err){
+            console.log(err);
+        } else {
+            res.render('genre', {
+                gameData: gameSchema
+            })    
+        }
+    })  
+});
+
 //List Games By Year Published
 router.get('/yearPublished', (req, res) => {
     gameData.find().sort({"yearPublished" : 1 , "title" : 1}).exec(function(err, gameSchema){
